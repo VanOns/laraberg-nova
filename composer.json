@@ -1,0 +1,40 @@
+{
+    "name": "vanons/laraberg-nova",
+    "description": "A Laravel Nova field.",
+    "keywords": [
+        "laravel",
+        "nova"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1.0",
+        "van-ons/laraberg": "@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vanons\\LarabergNova\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vanons\\LarabergNova\\FieldServiceProvider",
+                "VanOns\\Laraberg\\LarabergServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../../../laraberg",
+            "options": {
+                "symlink": true
+            }
+        }
+    ]
+}
