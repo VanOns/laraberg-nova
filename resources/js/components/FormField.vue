@@ -2,14 +2,13 @@
     <div class="laraberg-nova">
         <default-field :full-width-content="true" :field="field" :errors="errors" :show-help-text="showHelpText">
             <template slot="field">
-                <textarea
-                    :id="field.name"
+                <input
+                    :id="getId()"
                     :class="errorClasses"
                     :placeholder="field.name"
                     v-model="value"
-                    hidden
-                >
-                </textarea>
+                    type="text"
+                />
             </template>
         </default-field>
     </div>
@@ -17,7 +16,7 @@
 
 <script>
 import {FormField, HandlesValidationErrors} from 'laravel-nova'
-import * as Laraberg from "../../../vendor/van-ons/laraberg/resources/js/laraberg";
+import "../../../vendor/van-ons/laraberg/public/js/laraberg"
 
 export default {
     mixins: [FormField, HandlesValidationErrors],
@@ -32,6 +31,10 @@ export default {
             this.value = this.field.value || ''
         },
 
+        getId() {
+            return `${this.field.component}--${this.field.attribute}`
+        },
+
         /**
          * Fill the given FormData object with the field's internal value.
          */
@@ -40,8 +43,7 @@ export default {
         },
     },
     mounted() {
-
-        Laraberg.init(this.field.name)
+        Laraberg.init(this.getId())
     },
 }
 </script>

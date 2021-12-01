@@ -23,7 +23,6 @@
         "vue-template-compiler": "^2.6.14"
     },
     "dependencies": {
-        "@mauricewijnia/block-editor": "file:../../../block-editor/dist/index.js",
         "vue": "^2.5.0"
     }
 }

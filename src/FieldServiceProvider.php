@@ -16,11 +16,6 @@ class FieldServiceProvider extends ServiceProvider
     public function boot()
     {
         Nova::serving(function (ServingNova $event) {
-            Nova::remoteScript('https://unpkg.com/react@16.8.6/umd/react.production.min.js');
-            Nova::remoteScript('https://unpkg.com/react-dom@16.8.6/umd/react-dom.production.min.js');
-
-            // Nova::style('laraberg-nova-core', __DIR__.'/../../../../laraberg/public/css/laraberg.css');
-
             Nova::script('laraberg-nova', __DIR__.'/../dist/js/field.js');
             Nova::style('laraberg-nova', __DIR__.'/../dist/css/field.css');
         });

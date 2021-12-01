@@ -1,1 +1,38 @@
 // Nova Tool CSS
+@import '../../vendor/van-ons/laraberg/public/css/laraberg.css';
+
+$color-primary: #4099de;
+$color-primary-dark: #297ec0;
+
+:root {
+    --color-light-gray: var(--30);
+    --color-medium-gray: var(--50);
+    --color-dark-gray: var(--70);
+    --color-darkest-gray: var(--90);
+    --color-black: var(--black);
+    --color-white: var(--white);
+
+    --color-primary: var(--primary);
+    --color-secondary: var(--success);
+    --color-tertiary: var(--warning);
+    --color-success: var(--success);
+    --color-warning: var(--warning);
+    --color-alert: var(--danger);
+
+    --wp-admin-theme-color: var(--color-primary);
+    --wp-admin-theme-color-darker-10:
+            #{red(darken($color-primary, 10%))},
+            #{green(darken($color-primary, 10%))},
+            #{blue(darken($color-primary, 10%))};
+    --wp-admin-theme-color-darker-10: var(--primary-dark);
+    --wp-admin-theme-color-darker-10--rgb:
+            #{red(darken($color-primary-dark, 10%))},
+            #{green(darken($color-primary-dark, 10%))},
+            #{blue(darken($color-primary-dark, 10%))};
+    --wp-admin-theme-color-darker-20: var(--primary-dark);
+    --wp-admin-theme-color-darker-20--rgb:
+            #{red(darken($color-primary-dark, 20%))},
+            #{green(darken($color-primary-dark, 20%))},
+            #{blue(darken($color-primary-dark, 20%))};;
+    --wp-admin-border-width-focus: 2px;
+}

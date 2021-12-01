@@ -1,5 +1,5 @@
 {
-    "name": "vanons/laraberg-nova",
+    "name": "van-ons/laraberg-nova",
     "description": "A Laravel Nova field.",
     "keywords": [
         "laravel",
@@ -8,7 +8,7 @@
     "license": "MIT",
     "require": {
         "php": ">=7.1.0",
-        "van-ons/laraberg": "@dev"
+        "van-ons/laraberg": "v2.0.0-rc4"
     },
     "autoload": {
         "psr-4": {
@@ -27,14 +27,5 @@
         "sort-packages": true
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "repositories": [
-        {
-            "type": "path",
-            "url": "../../../laraberg",
-            "options": {
-                "symlink": true
-            }
-        }
-    ]
+    "prefer-stable": true
 }

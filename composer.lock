@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4dbe65a37846e15f2814494ad38283bf",
+    "content-hash": "40a44d1911ef172de4de934f609279d4",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -143,11 +143,17 @@
         },
         {
             "name": "van-ons/laraberg",
-            "version": "2.x-dev",
+            "version": "v2.0.0-rc4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/VanOns/laraberg.git",
+                "reference": "004a9cd6889d95d59654e1d7b07a91e6ec2a905b"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../../laraberg",
-                "reference": "085f62fe480606584476c039866c412d013cf80e"
+                "type": "zip",
+                "url": "https://api.github.com/repos/VanOns/laraberg/zipball/004a9cd6889d95d59654e1d7b07a91e6ec2a905b",
+                "reference": "004a9cd6889d95d59654e1d7b07a91e6ec2a905b",
+                "shasum": ""
             },
             "require": {
                 "embed/embed": "^3.3"
@@ -167,11 +173,7 @@
                     "VanOns\\Laraberg\\": "src"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "VanOns\\Laraberg\\Test\\": "tests"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-3.0-or-later"
             ],
@@ -182,23 +184,22 @@
                 }
             ],
             "description": "A Gutenberg implementation for Laravel",
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/VanOns/laraberg/issues",
+                "source": "https://github.com/VanOns/laraberg/tree/v2.0.0-rc4"
+            },
+            "time": "2021-12-01T15:00:24+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "van-ons/laraberg": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": ">=7.1.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }
