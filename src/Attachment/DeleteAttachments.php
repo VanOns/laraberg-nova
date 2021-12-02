@@ -3,6 +3,7 @@
 namespace Vanons\LarabergNova\Attachment;
 
 use Illuminate\Http\Request;
+use Vanons\LarabergNova\LarabergNova;
 
 class DeleteAttachments
 {
@@ -16,10 +17,10 @@ class DeleteAttachments
     /**
      * Create a new class instance.
      *
-     * @param  Attachment  $field
+     * @param LarabergNova $field
      * @return void
      */
-    public function __construct($field)
+    public function __construct(LarabergNova $field)
     {
         $this->field = $field;
     }

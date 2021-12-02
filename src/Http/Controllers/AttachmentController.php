@@ -1,11 +1,11 @@
 <?php
 
-namespace Laravel\Nova\Http\Controllers;
+namespace Vanons\LarabergNova\Http\Controllers;
 
 use Illuminate\Routing\Controller;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
-class LarabergNovaAttachmentController extends Controller
+class AttachmentController extends Controller
 {
     /**
      * Store an attachment for a Trix field.

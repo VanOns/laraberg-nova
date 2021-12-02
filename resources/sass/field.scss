@@ -36,3 +36,8 @@ $color-primary-dark: #297ec0;
             #{blue(darken($color-primary-dark, 20%))};;
     --wp-admin-border-width-focus: 2px;
 }
+
+.block-editor-container {
+    border-radius: .5rem;
+    overflow: hidden;
+}

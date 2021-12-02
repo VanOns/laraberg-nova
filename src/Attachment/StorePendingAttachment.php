@@ -4,7 +4,7 @@ namespace Vanons\LarabergNova\Attachment;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-use Laravel\Nova\Fields\Trix;
+use Vanons\LarabergNova\LarabergNova;
 
 class StorePendingAttachment
 {
@@ -18,10 +18,10 @@ class StorePendingAttachment
     /**
      * Create a new invokable instance.
      *
-     * @param Attachment $field
+     * @param LarabergNova $field
      * @return void
      */
-    public function __construct(Attachment $field)
+    public function __construct(LarabergNova $field)
     {
         $this->field = $field;
     }

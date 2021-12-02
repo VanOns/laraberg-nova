@@ -8,7 +8,8 @@
     "license": "MIT",
     "require": {
         "php": ">=7.1.0",
-        "van-ons/laraberg": "v2.0.0-rc5"
+        "van-ons/laraberg": "v2.0.0-rc6",
+        "laravel/nova": "*"
     },
     "autoload": {
         "psr-4": {
@@ -23,6 +24,12 @@
             ]
         }
     },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://nova.laravel.com"
+        }
+    ],
     "config": {
         "sort-packages": true
     },

@@ -12,7 +12,7 @@ class Attachment extends Model
      *
      * @var string
      */
-    protected $table = 'laraberg_nova_attachment';
+    protected $table = 'laraberg_nova_attachments';
 
     /**
      * The attributes that aren't mass assignable.

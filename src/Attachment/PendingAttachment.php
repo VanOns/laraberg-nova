@@ -4,7 +4,6 @@ namespace Vanons\LarabergNova\Attachment;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
-use Laravel\Nova\Fields\Trix;
 use Vanons\LarabergNova\LarabergNova;
 
 class PendingAttachment extends Model
@@ -14,7 +13,7 @@ class PendingAttachment extends Model
      *
      * @var string
      */
-    protected $table = 'laraberg_nova_pending_attachment';
+    protected $table = 'laraberg_nova_pending_attachments';
 
     /**
      * The attributes that aren't mass assignable.

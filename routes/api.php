@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Vanons\LarabergNova\Http\Controllers\AttachmentController;
 
-Route::post('/{resource}/laraberg-nova-attachment/{field}', 'LarabergNovaAttachmentController@store');
-Route::delete('/{resource}/laraberg-nova-attachment/{field}', 'LarabergNovaAttachmentController@destroyAttachment');
-Route::delete('/{resource}/laraberg-nova-attachment/{field}/{draftId}', 'LarabergNovaAttachmentController@destroyPending');
+Route::post('/{resource}/attachment/{field}', [AttachmentController::class, 'store']);
+Route::delete('/{resource}/attachment/{field}', [AttachmentController::class, 'destroyAttachment']);
+Route::delete('/{resource}/attachment/{field}/{draftId}', [AttachmentController::class, 'destroyPending']);
