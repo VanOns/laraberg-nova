@@ -45,6 +45,30 @@ export default {
             return `${this.field.component}--${this.field.attribute}`
         },
 
+        getSettings() {
+            const settings = {}
+
+            if (this.field.withFiles) {
+                settings.mediaUpload = mediaUpload(
+                    this.resourceName,
+                    this.field.attribute,
+                    this.draftId,
+                    (e) => {
+                        this.$toasted.show(
+                            this.__('An error occured while uploading your file.'),
+                            { type: 'error' }
+                        )
+                    }
+                )
+            }
+
+            if (this.field.height) {
+                settings.height = `${this.field.height}px`
+            }
+
+            return settings
+        },
+
         handleChange(event) {
             this.value = event.target.value
         },
@@ -59,21 +83,7 @@ export default {
     mounted() {
         this.$refs.input.value = this.value
 
-        Laraberg.init(this.getId() , {
-            mediaUpload: this.field.withFiles
-                ? mediaUpload(
-                    this.resourceName,
-                    this.field.attribute,
-                    this.draftId,
-                    (e) => {
-                        this.$toasted.show(
-                            this.__('An error occured while uploading your file.'),
-                            { type: 'error' }
-                        )
-                    }
-                )
-                : null
-        })
+        Laraberg.init(this.getId(), this.getSettings())
     }
 }
 </script>
