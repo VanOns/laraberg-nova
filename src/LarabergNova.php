@@ -138,6 +138,12 @@ class LarabergNova extends Field implements StorableContract, DeletableContract
         return $this;
     }
 
+    public function height(int $height) {
+        $this->withMeta(['height' => $height]);
+
+        return $this;
+    }
+
     /**
      * Hydrate the given attribute on the model based on the incoming request.
      *
@@ -171,6 +177,15 @@ class LarabergNova extends Field implements StorableContract, DeletableContract
                 collect($callbacks)->each->__invoke();
             };
         }
+    }
+
+    /**
+     * Get the full path that the field is stored at on disk.
+     *
+     * @return string|null
+     */
+    public function getStoragePath()
+    {
     }
 
     public function jsonSerialize()
