@@ -32,7 +32,6 @@ class LarabergNovaServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->register(LarabergServiceProvider::class);
     }
 
     public function routes() {
