@@ -1,13 +1,14 @@
 <?php
 
-namespace Vanons\LarabergNova;
+namespace VanOns\LarabergNova;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Nova\Events\ServingNova;
 use Laravel\Nova\Nova;
+use VanOns\Laraberg\LarabergServiceProvider;
 
-class FieldServiceProvider extends ServiceProvider
+class LarabergNovaServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap any application services.
@@ -31,7 +32,7 @@ class FieldServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->register(\VanOns\Laraberg\LarabergServiceProvider::class);
+        $this->app->register(LarabergServiceProvider::class);
     }
 
     public function routes() {

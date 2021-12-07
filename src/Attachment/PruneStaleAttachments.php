@@ -1,6 +1,6 @@
 <?php
 
-namespace Vanons\LarabergNova\Attachment;
+namespace VanOns\LarabergNova\Attachment;
 
 class PruneStaleAttachments
 {

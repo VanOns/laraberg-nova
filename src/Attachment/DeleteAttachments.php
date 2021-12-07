@@ -1,9 +1,9 @@
 <?php
 
-namespace Vanons\LarabergNova\Attachment;
+namespace VanOns\LarabergNova\Attachment;
 
 use Illuminate\Http\Request;
-use Vanons\LarabergNova\LarabergNova;
+use VanOns\LarabergNova\LarabergNova;
 
 class DeleteAttachments
 {

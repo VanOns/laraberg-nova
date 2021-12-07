@@ -1,6 +1,6 @@
 <?php
 
-namespace Vanons\LarabergNova\Http\Controllers;
+namespace VanOns\LarabergNova\Http\Controllers;
 
 use Illuminate\Routing\Controller;
 use Laravel\Nova\Http\Requests\NovaRequest;

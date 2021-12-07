@@ -13,13 +13,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Vanons\\LarabergNova\\": "src/"
+            "VanOns\\LarabergNova\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Vanons\\LarabergNova\\FieldServiceProvider",
+                "VanOns\\LarabergNova\\LarabergNovaServiceProvider",
                 "VanOns\\Laraberg\\LarabergServiceProvider"
             ]
         }

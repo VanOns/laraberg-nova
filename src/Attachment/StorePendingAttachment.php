@@ -1,10 +1,10 @@
 <?php
 
-namespace Vanons\LarabergNova\Attachment;
+namespace VanOns\LarabergNova\Attachment;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-use Vanons\LarabergNova\LarabergNova;
+use VanOns\LarabergNova\LarabergNova;
 
 class StorePendingAttachment
 {

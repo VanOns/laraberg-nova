@@ -1,6 +1,6 @@
 <?php
 
-namespace Vanons\LarabergNova;
+namespace VanOns\LarabergNova;
 
 use Laravel\Nova\Contracts\Deletable as DeletableContract;
 use Laravel\Nova\Contracts\Storable as StorableContract;
@@ -8,11 +8,11 @@ use Laravel\Nova\Fields\Deletable;
 use Laravel\Nova\Fields\Field;
 use Laravel\Nova\Fields\Storable;
 use Laravel\Nova\Http\Requests\NovaRequest;
-use Vanons\LarabergNova\Attachment\DeleteAttachments;
-use Vanons\LarabergNova\Attachment\DetachAttachment;
-use Vanons\LarabergNova\Attachment\DiscardPendingAttachments;
-use Vanons\LarabergNova\Attachment\PendingAttachment;
-use Vanons\LarabergNova\Attachment\StorePendingAttachment;
+use VanOns\LarabergNova\Attachment\DeleteAttachments;
+use VanOns\LarabergNova\Attachment\DetachAttachment;
+use VanOns\LarabergNova\Attachment\DiscardPendingAttachments;
+use VanOns\LarabergNova\Attachment\PendingAttachment;
+use VanOns\LarabergNova\Attachment\StorePendingAttachment;
 
 class LarabergNova extends Field implements StorableContract, DeletableContract
 {
