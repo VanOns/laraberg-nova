@@ -123,7 +123,7 @@ class LarabergNova extends Field implements StorableContract, DeletableContract
         return $this;
     }
 
-    public function withFiles($disk = null, $path = '/')
+    public function withFiles($disk, $path = '/')
     {
         $this->withFiles = true;
 
