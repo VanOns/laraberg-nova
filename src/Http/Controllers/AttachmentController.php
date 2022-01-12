@@ -65,14 +65,14 @@ class AttachmentController extends Controller
             return $field;
         }
 
-        return $fields->first(function ($field) use ($attribute) {
-            $subFields = $field->fields ?? $field->meta->fields ?? null;
+        return $fields->map(function ($field) use ($attribute) {
+            $subFields = $field->fields ?? $field->meta['fields'] ?? null;
 
-            if ($subFields === null || is_array($subFields)) {
-                return false;
+            if (!is_array($subFields)) {
+                return null;
             }
 
             return $this->findFieldRecursive($attribute, FieldCollection::make($subFields));
-        });
+        })->filter()->first();
     }
 }
