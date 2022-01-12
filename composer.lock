@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "561f62580213e8ee99791b40d07c7f3e",
+    "content-hash": "e4bd4532e32691d33059b7c7384f1a10",
     "packages": [
         {
             "name": "brick/math",
@@ -3700,16 +3700,16 @@
         },
         {
             "name": "van-ons/laraberg",
-            "version": "v2.0.0-rc10",
+            "version": "v2.0.0-rc11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/VanOns/laraberg.git",
-                "reference": "8d3d8e0d85f92eff42bd2321f6d37601c9319c0a"
+                "reference": "5cd97dd4fb43cb0b819d3bade52a6a468ecf59d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VanOns/laraberg/zipball/8d3d8e0d85f92eff42bd2321f6d37601c9319c0a",
-                "reference": "8d3d8e0d85f92eff42bd2321f6d37601c9319c0a",
+                "url": "https://api.github.com/repos/VanOns/laraberg/zipball/5cd97dd4fb43cb0b819d3bade52a6a468ecf59d5",
+                "reference": "5cd97dd4fb43cb0b819d3bade52a6a468ecf59d5",
                 "shasum": ""
             },
             "require": {
@@ -3743,9 +3743,9 @@
             "description": "A Gutenberg implementation for Laravel",
             "support": {
                 "issues": "https://github.com/VanOns/laraberg/issues",
-                "source": "https://github.com/VanOns/laraberg/tree/v2.0.0-rc10"
+                "source": "https://github.com/VanOns/laraberg/tree/v2.0.0-rc11"
             },
-            "time": "2022-01-11T13:40:44+00:00"
+            "time": "2022-01-12T13:33:19+00:00"
         },
         {
             "name": "voku/portable-ascii",

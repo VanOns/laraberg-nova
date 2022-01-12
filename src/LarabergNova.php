@@ -138,11 +138,56 @@ class LarabergNova extends Field implements StorableContract, DeletableContract
         return $this;
     }
 
-    public function height(int $height) {
-        $this->withMeta(['height' => $height]);
-
-        return $this;
+    public function height(int $height): LarabergNova
+    {
+        return $this->withMeta(['height' => $height]);
     }
+
+    public function disabledCoreBlocks(array $disabledCoreBlocks): LarabergNova
+    {
+        return $this->withMeta(compact('disabledCoreBlocks'));
+    }
+
+    public function alignWide(bool $alignWide): LarabergNova
+    {
+        return $this->withMeta(compact('alignWide'));
+    }
+
+    public function supportsLayout(bool $supportsLayout): LarabergNova
+    {
+        return $this->withMeta(compact('supportsLayout'));
+    }
+
+    public function maxWidth(int $maxWidth): LarabergNova
+    {
+        return $this->withMeta(compact('maxWidth'));
+    }
+
+    public function imageEditing(bool $imageEditing): LarabergNova
+    {
+        return $this->withMeta(compact('imageEditing'));
+    }
+
+    public function colors(array $colors): LarabergNova
+    {
+        return $this->withMeta(compact('colors'));
+    }
+
+    public function gradients(array $gradients): LarabergNova
+    {
+        return $this->withMeta(compact('gradients'));
+    }
+
+    public function fontSizes(array $fontSizes): LarabergNova
+    {
+        return $this->withMeta(compact('fontSizes'));
+    }
+
+    public function settings(array $settings): LarabergNova
+    {
+        return $this->withMeta($settings);
+    }
+
 
     /**
      * Hydrate the given attribute on the model based on the incoming request.

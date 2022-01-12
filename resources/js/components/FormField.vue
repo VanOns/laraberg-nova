@@ -44,9 +44,18 @@ export default {
         getId() {
             return `${this.field.component}--${this.field.attribute}`
         },
-
         getSettings() {
             const settings = {}
+            const settingKeys = [
+                'disabledCoreBlocks',
+                'alignWide',
+                'supportsLayout',
+                'maxWidth',
+                'imageEditing',
+                'colors',
+                'gradients',
+                'fontSizes'
+            ]
 
             if (this.field.withFiles) {
                 settings.mediaUpload = mediaUpload(
@@ -65,6 +74,14 @@ export default {
             if (this.field.height) {
                 settings.height = `${this.field.height}px`
             }
+
+            settingKeys.forEach(key => {
+                if (!Object.keys(this.field).includes(key)) {
+                    return;
+                }
+
+                settings[key] = this.field[key]
+            })
 
             return settings
         },
