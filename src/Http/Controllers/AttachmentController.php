@@ -17,11 +17,7 @@ class AttachmentController extends Controller
      */
     public function store(NovaRequest $request)
     {
-        $field = $request->newResource()
-            ->availableFields($request)
-            ->findFieldByAttribute($request->field, function () {
-                abort(404);
-            });
+        $field = $this->findField($request);
 
         return response()->json(['url' => call_user_func(
             $field->attachCallback, $request
