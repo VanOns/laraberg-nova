@@ -3,6 +3,8 @@
 namespace VanOns\LarabergNova\Http\Controllers;
 
 use Illuminate\Routing\Controller;
+use Laravel\Nova\Fields\Field;
+use Laravel\Nova\Fields\FieldCollection;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class AttachmentController extends Controller
@@ -34,15 +36,9 @@ class AttachmentController extends Controller
      */
     public function destroyAttachment(NovaRequest $request)
     {
-        $field = $request->newResource()
-            ->availableFields($request)
-            ->findFieldByAttribute($request->field, function () {
-                abort(404);
-            });
+        $field = $this->findField($request);
 
-        call_user_func(
-            $field->detachCallback, $request
-        );
+        call_user_func($field->detachCallback, $request);
     }
 
     /**
@@ -53,14 +49,34 @@ class AttachmentController extends Controller
      */
     public function destroyPending(NovaRequest $request)
     {
-        $field = $request->newResource()
-            ->availableFields($request)
-            ->findFieldByAttribute($request->field, function () {
-                abort(404);
-            });
+        $field = $this->findField($request);
 
-        call_user_func(
-            $field->discardCallback, $request
-        );
+        call_user_func($field->discardCallback, $request);
+    }
+
+    /**
+     * @param NovaRequest $request
+     * @return \Laravel\Nova\Fields\Field
+     */
+    public function findField(NovaRequest $request) {
+        $fields = $request->newResource()->availableFields($request);
+
+        return $this->findFieldRecursive($request->field, $fields);
+    }
+
+    protected function findFieldRecursive(string $attribute, FieldCollection $fields) {
+        if ($field = $fields->findFieldByAttribute($attribute)) {
+            return $field;
+        }
+
+        return $fields->first(function ($field) use ($attribute) {
+            $subFields = $field->fields ?? $field->meta->fields ?? null;
+
+            if ($subFields === null || is_array($subFields)) {
+                return false;
+            }
+
+            return $this->findFieldRecursive($attribute, FieldCollection::make($subFields));
+        });
     }
 }
