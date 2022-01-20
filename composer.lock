@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2b20e644ce288287a0615f246b884862",
+    "content-hash": "1320727ad123ff6cba00d5f2f7039694",
     "packages": [
         {
             "name": "brick/math",
@@ -3693,16 +3693,16 @@
         },
         {
             "name": "van-ons/laraberg",
-            "version": "v2.0.0-rc12",
+            "version": "dev-dev",
             "source": {
                 "type": "git",
                 "url": "https://github.com/VanOns/laraberg.git",
-                "reference": "af3f8341305559c02feaa62867afc839332d2d50"
+                "reference": "713a237df7739e83db87b8d87931930842296c85"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VanOns/laraberg/zipball/af3f8341305559c02feaa62867afc839332d2d50",
-                "reference": "af3f8341305559c02feaa62867afc839332d2d50",
+                "url": "https://api.github.com/repos/VanOns/laraberg/zipball/713a237df7739e83db87b8d87931930842296c85",
+                "reference": "713a237df7739e83db87b8d87931930842296c85",
                 "shasum": ""
             },
             "require": {
@@ -3736,9 +3736,9 @@
             "description": "A Gutenberg implementation for Laravel",
             "support": {
                 "issues": "https://github.com/VanOns/laraberg/issues",
-                "source": "https://github.com/VanOns/laraberg/tree/v2.0.0-rc12"
+                "source": "https://github.com/VanOns/laraberg/tree/dev"
             },
-            "time": "2022-01-13T14:09:44+00:00"
+            "time": "2022-01-20T14:31:06+00:00"
         },
         {
             "name": "voku/portable-ascii",
@@ -3818,7 +3818,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "van-ons/laraberg": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
