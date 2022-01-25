@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Nova\Events\ServingNova;
 use Laravel\Nova\Nova;
-use VanOns\Laraberg\LarabergServiceProvider;
 
 class LarabergNovaServiceProvider extends ServiceProvider
 {
@@ -17,6 +16,8 @@ class LarabergNovaServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $this->publishes([__DIR__ . '/../config/laraberg-nova.php' => config_path('laraberg-nova.php')], 'config');
+
         $this->routes();
 
         Nova::serving(function (ServingNova $event) {

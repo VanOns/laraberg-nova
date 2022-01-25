@@ -2,6 +2,7 @@
 
 namespace VanOns\LarabergNova;
 
+use Illuminate\Support\Str;
 use Laravel\Nova\Contracts\Deletable as DeletableContract;
 use Laravel\Nova\Contracts\Storable as StorableContract;
 use Laravel\Nova\Fields\Deletable;
@@ -54,6 +55,8 @@ class LarabergNova extends Field implements StorableContract, DeletableContract
     {
         parent::__construct($name, $attribute, $resolveCallback);
 
+        $this->loadDefaults();
+
         $this->displayCallback = function ($value, $model) use ($attribute) {
             if (method_exists($model, 'render')) {
                 return $model->render($attribute);
@@ -61,6 +64,12 @@ class LarabergNova extends Field implements StorableContract, DeletableContract
 
             return $value;
         };
+    }
+
+    public function loadDefaults() {
+        foreach (config('laraberg-nova.defaults', []) as $key => $value) {
+            $this->withMeta([ Str::camel($key) => $value ]);
+        }
     }
 
     /**
