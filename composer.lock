@@ -3697,12 +3697,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/VanOns/laraberg.git",
-                "reference": "713a237df7739e83db87b8d87931930842296c85"
+                "reference": "c04ce1fdfd20f2ccadb06384c4d3121a62001aa1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VanOns/laraberg/zipball/713a237df7739e83db87b8d87931930842296c85",
-                "reference": "713a237df7739e83db87b8d87931930842296c85",
+                "url": "https://api.github.com/repos/VanOns/laraberg/zipball/c04ce1fdfd20f2ccadb06384c4d3121a62001aa1",
+                "reference": "c04ce1fdfd20f2ccadb06384c4d3121a62001aa1",
                 "shasum": ""
             },
             "require": {
@@ -3738,7 +3738,7 @@
                 "issues": "https://github.com/VanOns/laraberg/issues",
                 "source": "https://github.com/VanOns/laraberg/tree/dev"
             },
-            "time": "2022-01-20T14:31:06+00:00"
+            "time": "2022-01-25T15:11:29+00:00"
         },
         {
             "name": "voku/portable-ascii",

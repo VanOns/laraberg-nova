@@ -101,6 +101,9 @@ export default {
         this.$refs.input.value = this.value
 
         Laraberg.init(this.getId(), this.getSettings())
+    },
+    beforeDestroy() {
+        Laraberg.removeEditor(this.$refs.input)
     }
 }
 </script>
