@@ -1,5 +1,5 @@
 <template>
-    <div class="laraberg-nova">
+    <div class="laraberg-nova" ref="fieldContainer">
         <default-field :full-width-content="true" :field="field" :errors="errors" :show-help-text="showHelpText">
             <template slot="field">
                 <input
@@ -40,7 +40,6 @@ export default {
         setInitialValue() {
             this.value = this.field.value || ''
         },
-
         getId() {
             return `${this.field.component}--${this.field.attribute}`
         },
@@ -99,8 +98,20 @@ export default {
     },
     mounted() {
         this.$refs.input.value = this.value
-
         Laraberg.init(this.getId(), this.getSettings())
+
+        /**
+         * Temporary fix for Typography buttons submitting the resource
+         */
+        this.$refs.fieldContainer.addEventListener('click', (e) => {
+            const selector = '[data-wp-component="ToggleGroupControlOption"]'
+            if (
+                e.target.matches(selector)
+                || e.target.parentNode.matches(selector)
+            ) {
+                e.preventDefault()
+            }
+        })
     },
     beforeDestroy() {
         Laraberg.removeEditor(this.$refs.input)
