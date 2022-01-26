@@ -66,10 +66,27 @@ class LarabergNova extends Field implements StorableContract, DeletableContract
         };
     }
 
-    public function loadDefaults() {
-        foreach (config('laraberg-nova.defaults', []) as $key => $value) {
-            $this->withMeta([ Str::camel($key) => $value ]);
+    protected function loadDefaults() {
+        $this->settings(
+            $this->keysToCamelRecursive(
+                config('laraberg-nova.defaults', [])
+            )
+        );
+    }
+
+    protected function keysToCamelRecursive(array $arr) {
+        $result = [];
+        foreach ($arr as $key => $value) {
+            $camel = str_starts_with($key, '__')
+                ? '__' . Str::camel($key)
+                : Str::camel($key);
+
+            $result[$camel] = is_array($value)
+                ? $this->keysToCamelRecursive($value)
+                : $value;
         }
+
+        return $result;
     }
 
     /**
@@ -149,52 +166,62 @@ class LarabergNova extends Field implements StorableContract, DeletableContract
 
     public function height(int $height): LarabergNova
     {
-        return $this->withMeta(['height' => $height]);
+        return $this->withSettings(['height' => $height]);
     }
 
     public function disabledCoreBlocks(array $disabledCoreBlocks): LarabergNova
     {
-        return $this->withMeta(compact('disabledCoreBlocks'));
+        return $this->withSettings(compact('disabledCoreBlocks'));
     }
 
     public function alignWide(bool $alignWide): LarabergNova
     {
-        return $this->withMeta(compact('alignWide'));
+        return $this->withSettings(compact('alignWide'));
     }
 
     public function supportsLayout(bool $supportsLayout): LarabergNova
     {
-        return $this->withMeta(compact('supportsLayout'));
+        return $this->withSettings(compact('supportsLayout'));
     }
 
     public function maxWidth(int $maxWidth): LarabergNova
     {
-        return $this->withMeta(compact('maxWidth'));
+        return $this->withSettings(compact('maxWidth'));
     }
 
     public function imageEditing(bool $imageEditing): LarabergNova
     {
-        return $this->withMeta(compact('imageEditing'));
+        return $this->withSettings(compact('imageEditing'));
     }
 
     public function colors(array $colors): LarabergNova
     {
-        return $this->withMeta(compact('colors'));
+        return $this->withSettings(compact('colors'));
     }
 
     public function gradients(array $gradients): LarabergNova
     {
-        return $this->withMeta(compact('gradients'));
+        return $this->withSettings(compact('gradients'));
     }
 
     public function fontSizes(array $fontSizes): LarabergNova
     {
-        return $this->withMeta(compact('fontSizes'));
+        return $this->withSettings(compact('fontSizes'));
+    }
+
+    public function withSettings(array $settings): LarabergNova
+    {
+        $settings = array_merge(
+            $this->meta['settings'] ?? [],
+            $settings
+        );
+
+        return $this->withMeta(compact('settings'));
     }
 
     public function settings(array $settings): LarabergNova
     {
-        return $this->withMeta($settings);
+        return $this->withSettings($settings);
     }
 
 

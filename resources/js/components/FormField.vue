@@ -45,18 +45,8 @@ export default {
         },
         getSettings() {
             const settings = {}
-            const settingKeys = [
-                'disabledCoreBlocks',
-                'alignWide',
-                'supportsLayout',
-                'maxWidth',
-                'imageEditing',
-                'colors',
-                'gradients',
-                'fontSizes'
-            ]
 
-            if (this.field.withFiles) {
+            if (this.field.settings?.withFiles) {
                 settings.mediaUpload = mediaUpload(
                     this.resourceName,
                     this.field.attribute,
@@ -70,19 +60,12 @@ export default {
                 )
             }
 
-            if (this.field.height) {
-                settings.height = `${this.field.height}px`
+            if (this.field.settings?.height) {
+                settings.height = `${this.field.settings.height}px`
+                delete this.field.settings.height
             }
 
-            settingKeys.forEach(key => {
-                if (!Object.keys(this.field).includes(key)) {
-                    return;
-                }
-
-                settings[key] = this.field[key]
-            })
-
-            return settings
+            return {...settings, ...this.field.settings}
         },
 
         handleChange(event) {
@@ -98,6 +81,7 @@ export default {
     },
     mounted() {
         this.$refs.input.value = this.value
+        console.log(this.getSettings())
         Laraberg.init(this.getId(), this.getSettings())
 
         /**
