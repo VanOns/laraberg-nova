@@ -81,7 +81,6 @@ export default {
     },
     mounted() {
         this.$refs.input.value = this.value
-        console.log(this.getSettings())
         Laraberg.init(this.getId(), this.getSettings())
 
         /**
