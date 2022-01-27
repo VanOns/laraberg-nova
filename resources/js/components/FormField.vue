@@ -46,7 +46,7 @@ export default {
         getSettings() {
             const settings = {}
 
-            if (this.field.settings?.withFiles) {
+            if (this.field?.withFiles) {
                 settings.mediaUpload = mediaUpload(
                     this.resourceName,
                     this.field.attribute,
