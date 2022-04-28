@@ -169,6 +169,11 @@ class LarabergNova extends Field implements StorableContract, DeletableContract
         return $this->withSettings(['height' => $height]);
     }
 
+    public function allowedBlockTypes(array $allowedBlockTypes): LarabergNova
+    {
+        return $this->withSettings(compact('allowedBlockTypes'));
+    }
+
     public function disabledCoreBlocks(array $disabledCoreBlocks): LarabergNova
     {
         return $this->withSettings(compact('disabledCoreBlocks'));
