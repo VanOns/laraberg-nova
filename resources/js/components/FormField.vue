@@ -77,9 +77,20 @@ export default {
             formData.append(this.field.attribute, this.value || '')
             formData.append(this.field.attribute + 'DraftId', this.draftId)
         },
+        registerActions() {
+            const { addAction, doAction } = Laraberg.wordpress.hooks
+            addAction('blockEditor.beforeInit', 'laraberg-nova', () => {
+                doAction('larabergNova.beforeInit', this.getSettings(), this.resourceName, this.field)
+            })
+
+            addAction('blockEditor.afterInit', 'laraberg-nova', () => {
+                doAction('larabergNova.afterInit', this.getSettings(), this.resourceName, this.field)
+            })
+        }
     },
     mounted() {
         this.$refs.input.value = this.value
+        this.registerActions()
         Laraberg.init(this.getId(), this.getSettings())
 
         /**
