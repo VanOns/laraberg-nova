@@ -19,7 +19,6 @@
 import {FormField, HandlesValidationErrors} from 'laravel-nova'
 import mediaUpload from '../media-upload'
 import uuidv4 from '../uuidv4'
-import "../../../vendor/van-ons/laraberg/public/js/laraberg"
 
 export default {
     mixins: [FormField, HandlesValidationErrors],

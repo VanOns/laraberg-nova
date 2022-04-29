@@ -22,6 +22,7 @@ class LarabergNovaServiceProvider extends ServiceProvider
 
         Nova::serving(function (ServingNova $event) {
             Nova::script('laraberg-nova', __DIR__.'/../dist/js/field.js');
+            Nova::script('laraberg', public_path('/vendor/laraberg/js/laraberg.js'));
             Nova::style('laraberg-nova', __DIR__.'/../dist/css/field.css');
         });
     }

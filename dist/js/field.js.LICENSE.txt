@@ -5,8 +5,6 @@
  * @license  MIT
  */
 
-/*! For license information please see laraberg.js.LICENSE.txt */
-
 /**
  * @license
  * Lodash <https://lodash.com/>

@@ -5,3 +5,8 @@ mix
   .js('resources/js/field.js', 'js')
   .sass('resources/sass/field.scss', 'css')
   .vue()
+    .webpackConfig({
+        externals: {
+            'laraberg': 'Laraberg',
+        }
+    })
