@@ -97,3 +97,10 @@ Schema::create('laraberg_nova_attachments', function (Blueprint $table) {
 });
 ```
 
+#### Allowed block types
+
+You can limit the block types that should be allowed.
+
+```php
+LarabergNova::make(__('Content'), 'content')->allowedBlockTypes(['core/heading'])
+```
