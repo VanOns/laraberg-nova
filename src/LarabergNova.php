@@ -17,7 +17,8 @@ use VanOns\LarabergNova\Attachment\StorePendingAttachment;
 
 class LarabergNova extends Field implements StorableContract, DeletableContract
 {
-    use Storable, Deletable;
+    use Storable;
+    use Deletable;
     /**
      * The field's component.
      *
@@ -66,7 +67,8 @@ class LarabergNova extends Field implements StorableContract, DeletableContract
         };
     }
 
-    protected function loadDefaults() {
+    protected function loadDefaults()
+    {
         $this->settings(
             $this->keysToCamelRecursive(
                 config('laraberg-nova.defaults', [])
@@ -74,7 +76,8 @@ class LarabergNova extends Field implements StorableContract, DeletableContract
         );
     }
 
-    protected function keysToCamelRecursive(array $arr) {
+    protected function keysToCamelRecursive(array $arr)
+    {
         $result = [];
         foreach ($arr as $key => $value) {
             $camel = str_starts_with($key, '__')
@@ -156,10 +159,10 @@ class LarabergNova extends Field implements StorableContract, DeletableContract
         $this->disk($disk)->path($path);
 
         $this->attach(new StorePendingAttachment($this))
-             ->detach(new DetachAttachment($this))
-             ->delete(new DeleteAttachments($this))
-             ->discard(new DiscardPendingAttachments($this))
-             ->prunable();
+            ->detach(new DetachAttachment($this))
+            ->delete(new DeleteAttachments($this))
+            ->discard(new DiscardPendingAttachments($this))
+            ->prunable();
 
         return $this;
     }
@@ -269,7 +272,7 @@ class LarabergNova extends Field implements StorableContract, DeletableContract
     {
     }
 
-    public function jsonSerialize()
+    public function jsonSerialize(): array
     {
         return array_merge(
             parent::jsonSerialize(),

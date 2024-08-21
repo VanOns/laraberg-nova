@@ -1,0 +1,281 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Access to an undefined property VanOns\\\\LarabergNova\\\\Attachment\\\\Attachment\\:\\:\\$attachment\\.$#"
+			count: 1
+			path: src/Attachment/Attachment.php
+
+		-
+			message: "#^Access to an undefined property VanOns\\\\LarabergNova\\\\Attachment\\\\Attachment\\:\\:\\$disk\\.$#"
+			count: 1
+			path: src/Attachment/Attachment.php
+
+		-
+			message: "#^PHPDoc type array of property VanOns\\\\LarabergNova\\\\Attachment\\\\Attachment\\:\\:\\$guarded is not covariant with PHPDoc type array\\<string\\>\\|bool of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$guarded\\.$#"
+			count: 1
+			path: src/Attachment/Attachment.php
+
+		-
+			message: "#^Property VanOns\\\\LarabergNova\\\\Attachment\\\\Attachment\\:\\:\\$guarded type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Attachment/Attachment.php
+
+		-
+			message: "#^Access to property \\$attribute on an unknown class Laraberg\\\\Nova\\\\Fields\\\\Attachment\\.$#"
+			count: 1
+			path: src/Attachment/DeleteAttachments.php
+
+		-
+			message: "#^Call to an undefined static method VanOns\\\\LarabergNova\\\\Attachment\\\\Attachment\\:\\:where\\(\\)\\.$#"
+			count: 1
+			path: src/Attachment/DeleteAttachments.php
+
+		-
+			message: "#^Method VanOns\\\\LarabergNova\\\\Attachment\\\\DeleteAttachments\\:\\:__invoke\\(\\) return type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Attachment/DeleteAttachments.php
+
+		-
+			message: "#^Property VanOns\\\\LarabergNova\\\\Attachment\\\\DeleteAttachments\\:\\:\\$field \\(Laraberg\\\\Nova\\\\Fields\\\\Attachment\\) does not accept VanOns\\\\LarabergNova\\\\LarabergNova\\.$#"
+			count: 1
+			path: src/Attachment/DeleteAttachments.php
+
+		-
+			message: "#^Property VanOns\\\\LarabergNova\\\\Attachment\\\\DeleteAttachments\\:\\:\\$field has unknown class Laraberg\\\\Nova\\\\Fields\\\\Attachment as its type\\.$#"
+			count: 1
+			path: src/Attachment/DeleteAttachments.php
+
+		-
+			message: "#^Access to an undefined property Illuminate\\\\Http\\\\Request\\:\\:\\$attachmentUrl\\.$#"
+			count: 1
+			path: src/Attachment/DetachAttachment.php
+
+		-
+			message: "#^Call to an undefined static method VanOns\\\\LarabergNova\\\\Attachment\\\\Attachment\\:\\:where\\(\\)\\.$#"
+			count: 1
+			path: src/Attachment/DetachAttachment.php
+
+		-
+			message: "#^Access to an undefined property Illuminate\\\\Http\\\\Request\\:\\:\\$draftId\\.$#"
+			count: 1
+			path: src/Attachment/DiscardPendingAttachments.php
+
+		-
+			message: "#^Call to an undefined static method VanOns\\\\LarabergNova\\\\Attachment\\\\PendingAttachment\\:\\:where\\(\\)\\.$#"
+			count: 1
+			path: src/Attachment/DiscardPendingAttachments.php
+
+		-
+			message: "#^Access to an undefined property VanOns\\\\LarabergNova\\\\Attachment\\\\PendingAttachment\\:\\:\\$attachment\\.$#"
+			count: 3
+			path: src/Attachment/PendingAttachment.php
+
+		-
+			message: "#^Access to an undefined property VanOns\\\\LarabergNova\\\\Attachment\\\\PendingAttachment\\:\\:\\$disk\\.$#"
+			count: 1
+			path: src/Attachment/PendingAttachment.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Contracts\\\\Filesystem\\\\Filesystem\\:\\:url\\(\\)\\.$#"
+			count: 1
+			path: src/Attachment/PendingAttachment.php
+
+		-
+			message: "#^Call to an undefined static method VanOns\\\\LarabergNova\\\\Attachment\\\\Attachment\\:\\:create\\(\\)\\.$#"
+			count: 1
+			path: src/Attachment/PendingAttachment.php
+
+		-
+			message: "#^Call to an undefined static method VanOns\\\\LarabergNova\\\\Attachment\\\\PendingAttachment\\:\\:where\\(\\)\\.$#"
+			count: 1
+			path: src/Attachment/PendingAttachment.php
+
+		-
+			message: "#^PHPDoc type array of property VanOns\\\\LarabergNova\\\\Attachment\\\\PendingAttachment\\:\\:\\$guarded is not covariant with PHPDoc type array\\<string\\>\\|bool of overridden property Illuminate\\\\Database\\\\Eloquent\\\\Model\\:\\:\\$guarded\\.$#"
+			count: 1
+			path: src/Attachment/PendingAttachment.php
+
+		-
+			message: "#^Property VanOns\\\\LarabergNova\\\\Attachment\\\\PendingAttachment\\:\\:\\$guarded type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/Attachment/PendingAttachment.php
+
+		-
+			message: "#^Call to an undefined static method VanOns\\\\LarabergNova\\\\Attachment\\\\PendingAttachment\\:\\:where\\(\\)\\.$#"
+			count: 1
+			path: src/Attachment/PruneStaleAttachments.php
+
+		-
+			message: "#^Access to an undefined property Illuminate\\\\Http\\\\Request\\:\\:\\$draftId\\.$#"
+			count: 1
+			path: src/Attachment/StorePendingAttachment.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Contracts\\\\Filesystem\\\\Filesystem\\:\\:url\\(\\)\\.$#"
+			count: 1
+			path: src/Attachment/StorePendingAttachment.php
+
+		-
+			message: "#^Call to an undefined method VanOns\\\\LarabergNova\\\\Attachment\\\\Attachment\\:\\:getStorageDir\\(\\)\\.$#"
+			count: 1
+			path: src/Attachment/StorePendingAttachment.php
+
+		-
+			message: "#^Call to an undefined method VanOns\\\\LarabergNova\\\\Attachment\\\\Attachment\\:\\:getStorageDisk\\(\\)\\.$#"
+			count: 1
+			path: src/Attachment/StorePendingAttachment.php
+
+		-
+			message: "#^Call to an undefined static method VanOns\\\\LarabergNova\\\\Attachment\\\\PendingAttachment\\:\\:create\\(\\)\\.$#"
+			count: 1
+			path: src/Attachment/StorePendingAttachment.php
+
+		-
+			message: "#^Property VanOns\\\\LarabergNova\\\\Attachment\\\\StorePendingAttachment\\:\\:\\$field \\(VanOns\\\\LarabergNova\\\\Attachment\\\\Attachment\\) does not accept VanOns\\\\LarabergNova\\\\LarabergNova\\.$#"
+			count: 1
+			path: src/Attachment/StorePendingAttachment.php
+
+		-
+			message: "#^Access to an undefined property Laravel\\\\Nova\\\\Fields\\\\Field\\:\\:\\$attachCallback\\.$#"
+			count: 1
+			path: src/Http/Controllers/AttachmentController.php
+
+		-
+			message: "#^Access to an undefined property Laravel\\\\Nova\\\\Fields\\\\Field\\:\\:\\$detachCallback\\.$#"
+			count: 1
+			path: src/Http/Controllers/AttachmentController.php
+
+		-
+			message: "#^Access to an undefined property Laravel\\\\Nova\\\\Fields\\\\Field\\:\\:\\$discardCallback\\.$#"
+			count: 1
+			path: src/Http/Controllers/AttachmentController.php
+
+		-
+			message: "#^Access to an undefined property Laravel\\\\Nova\\\\Http\\\\Requests\\\\NovaRequest\\:\\:\\$field\\.$#"
+			count: 1
+			path: src/Http/Controllers/AttachmentController.php
+
+		-
+			message: "#^Method VanOns\\\\LarabergNova\\\\Http\\\\Controllers\\\\AttachmentController\\:\\:destroyAttachment\\(\\) should return Illuminate\\\\Http\\\\Response but return statement is missing\\.$#"
+			count: 1
+			path: src/Http/Controllers/AttachmentController.php
+
+		-
+			message: "#^Method VanOns\\\\LarabergNova\\\\Http\\\\Controllers\\\\AttachmentController\\:\\:destroyPending\\(\\) should return Illuminate\\\\Http\\\\Response but return statement is missing\\.$#"
+			count: 1
+			path: src/Http/Controllers/AttachmentController.php
+
+		-
+			message: "#^Method VanOns\\\\LarabergNova\\\\Http\\\\Controllers\\\\AttachmentController\\:\\:findFieldRecursive\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/Http/Controllers/AttachmentController.php
+
+		-
+			message: "#^Method VanOns\\\\LarabergNova\\\\Http\\\\Controllers\\\\AttachmentController\\:\\:findFieldRecursive\\(\\) has parameter \\$fields with generic class Laravel\\\\Nova\\\\Fields\\\\FieldCollection but does not specify its types\\: TKey, TValue$#"
+			count: 1
+			path: src/Http/Controllers/AttachmentController.php
+
+		-
+			message: "#^Method VanOns\\\\LarabergNova\\\\Http\\\\Controllers\\\\AttachmentController\\:\\:store\\(\\) should return Illuminate\\\\Http\\\\Response but returns Illuminate\\\\Http\\\\JsonResponse\\.$#"
+			count: 1
+			path: src/Http/Controllers/AttachmentController.php
+
+		-
+			message: "#^Parameter \\#2 \\$fields of method VanOns\\\\LarabergNova\\\\Http\\\\Controllers\\\\AttachmentController\\:\\:findFieldRecursive\\(\\) expects Laravel\\\\Nova\\\\Fields\\\\FieldCollection, Illuminate\\\\Support\\\\Collection\\<\\(int\\|string\\), mixed\\> given\\.$#"
+			count: 1
+			path: src/Http/Controllers/AttachmentController.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Support\\\\HigherOrderCollectionProxy\\<int, callable\\>\\:\\:__invoke\\(\\)\\.$#"
+			count: 1
+			path: src/LarabergNova.php
+
+		-
+			message: "#^Class VanOns\\\\LarabergNova\\\\Attachment\\\\DetachAttachment does not have a constructor and must be instantiated without any parameters\\.$#"
+			count: 1
+			path: src/LarabergNova.php
+
+		-
+			message: "#^Class VanOns\\\\LarabergNova\\\\Attachment\\\\DiscardPendingAttachments does not have a constructor and must be instantiated without any parameters\\.$#"
+			count: 1
+			path: src/LarabergNova.php
+
+		-
+			message: "#^Method VanOns\\\\LarabergNova\\\\LarabergNova\\:\\:colors\\(\\) has parameter \\$colors with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/LarabergNova.php
+
+		-
+			message: "#^Method VanOns\\\\LarabergNova\\\\LarabergNova\\:\\:disabledCoreBlocks\\(\\) has parameter \\$disabledCoreBlocks with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/LarabergNova.php
+
+		-
+			message: "#^Method VanOns\\\\LarabergNova\\\\LarabergNova\\:\\:fontSizes\\(\\) has parameter \\$fontSizes with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/LarabergNova.php
+
+		-
+			message: "#^Method VanOns\\\\LarabergNova\\\\LarabergNova\\:\\:getStoragePath\\(\\) should return string\\|null but return statement is missing\\.$#"
+			count: 1
+			path: src/LarabergNova.php
+
+		-
+			message: "#^Method VanOns\\\\LarabergNova\\\\LarabergNova\\:\\:gradients\\(\\) has parameter \\$gradients with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/LarabergNova.php
+
+		-
+			message: "#^Method VanOns\\\\LarabergNova\\\\LarabergNova\\:\\:keysToCamelRecursive\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/LarabergNova.php
+
+		-
+			message: "#^Method VanOns\\\\LarabergNova\\\\LarabergNova\\:\\:keysToCamelRecursive\\(\\) has parameter \\$arr with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/LarabergNova.php
+
+		-
+			message: "#^Method VanOns\\\\LarabergNova\\\\LarabergNova\\:\\:loadDefaults\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/LarabergNova.php
+
+		-
+			message: "#^Method VanOns\\\\LarabergNova\\\\LarabergNova\\:\\:settings\\(\\) has parameter \\$settings with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/LarabergNova.php
+
+		-
+			message: "#^Method VanOns\\\\LarabergNova\\\\LarabergNova\\:\\:withFiles\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/LarabergNova.php
+
+		-
+			message: "#^Method VanOns\\\\LarabergNova\\\\LarabergNova\\:\\:withFiles\\(\\) has parameter \\$disk with no type specified\\.$#"
+			count: 1
+			path: src/LarabergNova.php
+
+		-
+			message: "#^Method VanOns\\\\LarabergNova\\\\LarabergNova\\:\\:withFiles\\(\\) has parameter \\$path with no type specified\\.$#"
+			count: 1
+			path: src/LarabergNova.php
+
+		-
+			message: "#^Method VanOns\\\\LarabergNova\\\\LarabergNova\\:\\:withSettings\\(\\) has parameter \\$settings with no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/LarabergNova.php
+
+		-
+			message: "#^Property VanOns\\\\LarabergNova\\\\LarabergNova\\:\\:\\$withFiles has no type specified\\.$#"
+			count: 1
+			path: src/LarabergNova.php
+
+		-
+			message: "#^Call to an undefined method Illuminate\\\\Contracts\\\\Foundation\\\\Application\\:\\:routesAreCached\\(\\)\\.$#"
+			count: 1
+			path: src/LarabergNovaServiceProvider.php
+
+		-
+			message: "#^Method VanOns\\\\LarabergNova\\\\LarabergNovaServiceProvider\\:\\:routes\\(\\) has no return type specified\\.$#"
+			count: 1
+			path: src/LarabergNovaServiceProvider.php

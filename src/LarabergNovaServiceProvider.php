@@ -36,7 +36,8 @@ class LarabergNovaServiceProvider extends ServiceProvider
     {
     }
 
-    public function routes() {
+    public function routes()
+    {
         if ($this->app->routesAreCached()) {
             return;
         }

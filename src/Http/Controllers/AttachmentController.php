@@ -20,7 +20,8 @@ class AttachmentController extends Controller
         $field = $this->findField($request);
 
         return response()->json(['url' => call_user_func(
-            $field->attachCallback, $request
+            $field->attachCallback,
+            $request
         )]);
     }
 
@@ -54,13 +55,15 @@ class AttachmentController extends Controller
      * @param NovaRequest $request
      * @return \Laravel\Nova\Fields\Field
      */
-    public function findField(NovaRequest $request) {
+    public function findField(NovaRequest $request)
+    {
         $fields = $request->newResource()->availableFields($request);
 
         return $this->findFieldRecursive($request->field, $fields);
     }
 
-    protected function findFieldRecursive(string $attribute, FieldCollection $fields) {
+    protected function findFieldRecursive(string $attribute, FieldCollection $fields)
+    {
         if ($field = $fields->findFieldByAttribute($attribute)) {
             return $field;
         }
