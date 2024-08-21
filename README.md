@@ -2,7 +2,9 @@
 
 A nova field for Laraberg
 
-## Installation
+## Quick start
+
+### Installation
 
 Install via composer
 
@@ -16,12 +18,14 @@ Publish Laraberg files
 php artisan vendor:publish --provider="VanOns\Laraberg\LarabergServiceProvider"
 ```
 
-Laraberg provides a CSS file that should be present on the page you want to render content on:
+Laraberg provides a CSS file that should be present on the page you want to
+render content on:
 
 ```html
 <link rel="stylesheet" href="{{asset('vendor/laraberg/css/laraberg.css')}}">
 ```
-## Usage
+
+### Usage
 
 Simply register the field in your Resource
 
@@ -29,7 +33,9 @@ Simply register the field in your Resource
 LarabergNova::make(__('Content'), 'content')
 ```
 
-Add the `RendersContent` trait to your model. And optionally define the `$contentColumn` property to point to the column that holds your Laraberg content, this defaults to `content`.
+Add the `RendersContent` trait to your model. And optionally define the
+`$contentColumn` property to point to the column that holds your Laraberg
+content, this defaults to `content`.
 
 ```php
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -39,34 +45,32 @@ use VanOns\Laraberg\Traits\RendersContent;
 class Post extends Model
 {
     use HasFactory, RendersContent;
-    
+
     protected $contentColumn = 'content';
-       
+
     ...
 }
 ```
 
-
-
 Call the render method on your model in a template.
-
 
 ```php
 {!! $model->render() !!}
 ```
 
-### Options
+#### Options
 
 The field has a few options you can configure.
 
-#### Height
+##### Height
 
 You can customize the height of the editor.
 
 ```php
 LarabergNova::make(__('Content'), 'content')->height(600)
 ```
-#### Attachments
+
+##### Attachments
 
 You can enable uploading attachments.
 
@@ -97,3 +101,49 @@ Schema::create('laraberg_nova_attachments', function (Blueprint $table) {
 });
 ```
 
+## Documentation
+
+Please see the [documentation] for detailed information about installation and usage.
+
+## Contributing
+
+Please see [contributing] for more information about how you can contribute.
+
+## Changelog
+
+Please see [changelog] for more information about what has changed recently.
+
+## Upgrading
+
+Please see [upgrading] for more information about how to upgrade.
+
+## Security
+
+Please see [security] for more information about how we deal with security.
+
+## Credits
+
+We would like to thank the following contributors for their contributions to
+this project:
+
+- [All Contributors][all-contributors]
+
+## License
+
+The scripts and documentation in this project are released under the [MIT License][license].
+
+---
+
+<p align="center">
+    <a href="https://van-ons.nl/" target="_blank">
+        <img src="https://opensource.van-ons.nl/files/cow.png" width="50" alt="Logo of Van Ons">
+    </a>
+</p>
+
+[documentation]: docs/README.md#contents
+[contributing]: CONTRIBUTING.md
+[changelog]: CHANGELOG.md
+[upgrading]: UPGRADING.md
+[security]: SECURITY.md
+[all-contributors]: ../../contributors
+[license]: LICENSE.md
