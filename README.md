@@ -1,3 +1,5 @@
+<p align="center"><img height="300px" src="./logo-text.svg" alt="logo"></p>
+
 # Laraberg Nova
 
 A nova field for Laraberg
@@ -6,13 +8,13 @@ A nova field for Laraberg
 
 ### Installation
 
-Install via composer
+Install via Composer:
 
 ```bash
 composer require van-ons/laraberg-nova
 ```
 
-Publish Laraberg files
+Publish Laraberg files:
 
 ```bash
 php artisan vendor:publish --provider="VanOns\Laraberg\LarabergServiceProvider"
@@ -27,7 +29,7 @@ render content on:
 
 ### Usage
 
-Simply register the field in your Resource
+Simply register the field in your Resource:
 
 ```php
 LarabergNova::make(__('Content'), 'content')
@@ -52,7 +54,7 @@ class Post extends Model
 }
 ```
 
-Call the render method on your model in a template.
+Call the render method on your model in a template:
 
 ```php
 {!! $model->render() !!}
@@ -64,7 +66,7 @@ The field has a few options you can configure.
 
 ##### Height
 
-You can customize the height of the editor.
+You can customize the height of the editor:
 
 ```php
 LarabergNova::make(__('Content'), 'content')->height(600)
@@ -72,13 +74,13 @@ LarabergNova::make(__('Content'), 'content')->height(600)
 
 ##### Attachments
 
-You can enable uploading attachments.
+You can enable uploading attachments:
 
 ```php
 LarabergNova::make(__('Content'), 'content')->withFiles('public')
 ```
 
-You will need to add the following migration to make this work.
+You will need to add the following migration to make this work:
 
 ```php
 Schema::create('laraberg_nova_pending_attachments', function (Blueprint $table) {
