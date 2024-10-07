@@ -2,7 +2,7 @@
 
 # Laraberg Nova
 
-A nova field for Laraberg
+A Nova field for Laraberg.
 
 ## Quick start
 
