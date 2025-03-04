@@ -24,6 +24,6 @@ By contributing, you agree that your contributions will be licensed under the [M
 - [How to contribute to Open Source](https://opensource.guide/how-to-contribute/)
 
 [code-of-conduct]: CODE_OF_CONDUCT.md
-[issues]: https://github.com/VanOns/laravel-attachment-library/issues
-[discussions]: https://github.com/VanOns/laravel-attachment-library/discussions
+[issues]: https://github.com/VanOns/laraberg-nova/issues
+[discussions]: https://github.com/VanOns/laraberg-nova/discussions
 [license]: LICENSE.md
