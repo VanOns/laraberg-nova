@@ -6,6 +6,13 @@ A Nova field for Laraberg.
 
 ## Quick start
 
+### Requirements
+
+| Dependency   | Minimum version |
+|--------------|-----------------|
+| PHP          | 8.1             |
+| Laravel Nova | 4.35            |
+
 ### Installation
 
 Install via Composer:
@@ -24,7 +31,7 @@ Laraberg provides a CSS file that should be present on the page you want to
 render content on:
 
 ```html
-<link rel="stylesheet" href="{{asset('vendor/laraberg/css/laraberg.css')}}">
+<link rel="stylesheet" href="{{ asset('vendor/laraberg/css/laraberg.css') }}">
 ```
 
 ### Usage
@@ -103,10 +110,6 @@ Schema::create('laraberg_nova_attachments', function (Blueprint $table) {
 });
 ```
 
-## Documentation
-
-Please see the [documentation] for detailed information about installation and usage.
-
 ## Contributing
 
 Please see [contributing] for more information about how you can contribute.
@@ -142,7 +145,6 @@ The scripts and documentation in this project are released under the [MIT Licens
     </a>
 </p>
 
-[documentation]: docs/README.md#contents
 [contributing]: CONTRIBUTING.md
 [changelog]: CHANGELOG.md
 [upgrading]: UPGRADING.md
