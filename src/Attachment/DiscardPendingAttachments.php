@@ -15,8 +15,8 @@ class DiscardPendingAttachments
     public function __invoke(Request $request)
     {
         PendingAttachment::where('draft_id', $request->draftId)
-                    ->get()
-                    ->each
-                    ->purge();
+            ->get()
+            ->each
+            ->purge();
     }
 }
