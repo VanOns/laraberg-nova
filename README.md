@@ -1,4 +1,4 @@
-<p align="center"><img height="300px" src="./logo-text.svg" alt="logo"></p>
+<p align="center"><img height="300px" src="art/social-card.svg" alt="Social card of Laraberg Nova"></p>
 
 # Laraberg Nova
 
