@@ -9,7 +9,7 @@
     "require": {
         "php": "^8.1",
         "van-ons/laraberg": "dev-dev",
-        "laravel/nova": "^4.35"
+        "laravel/nova": "^5.3"
     },
     "autoload": {
         "psr-4": {
